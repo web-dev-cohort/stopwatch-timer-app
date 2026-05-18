@@ -26,11 +26,11 @@ export function DurationInput({ totalSeconds, disabled, onChange }) {
     <div className="grid grid-cols-3 gap-3">
       {fields.map(([part, value, label]) => (
         <label key={part} className="grid gap-2">
-          <span className="text-xs font-bold uppercase text-slate-500">
+          <span className="text-xs font-bold uppercase text-slate-500 dark:text-slate-400">
             {label}
           </span>
           <input
-            className="h-12 rounded-lg border border-slate-200 bg-white px-3 text-center font-mono text-lg font-bold text-slate-950 shadow-sm outline-none transition focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100 disabled:bg-slate-100 disabled:text-slate-400"
+            className="h-12 rounded-lg border border-slate-200 bg-white px-3 text-center font-mono text-lg font-bold text-slate-950 shadow-sm outline-none transition focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100 disabled:bg-slate-100 disabled:text-slate-400 dark:border-slate-700 dark:bg-slate-950 dark:text-white dark:focus:border-cyan-300 dark:focus:ring-cyan-950 dark:disabled:bg-slate-800 dark:disabled:text-slate-500"
             disabled={disabled}
             inputMode="numeric"
             max={part === 'hours' ? '99' : '59'}

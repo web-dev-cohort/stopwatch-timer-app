@@ -6,6 +6,7 @@ A polished React application with two focused time tools:
 - Timer with custom hour, minute, and second input
 - Clear digital time displays
 - Responsive Tailwind CSS interface
+- Dark theme toggle with saved preference
 - Component, hook, and utility separation for maintainable code
 
 ## Tech Stack
@@ -100,7 +101,7 @@ Global stylesheet for Tailwind layers and small base styles.
 
 Reusable UI and feature components:
 
-- `AppHeader.jsx` renders the page title and short description.
+- `AppHeader.jsx` renders the page title, short description, and light/dark theme toggle.
 - `ControlButton.jsx` provides a shared styled button with optional icons and visual intents.
 - `DurationInput.jsx` renders the timer hour, minute, and second inputs.
 - `StopwatchPanel.jsx` owns the stopwatch UI and connects it to the stopwatch hook.
@@ -138,6 +139,12 @@ Small shared utilities:
 - Inputs are disabled while running to avoid accidental duration changes
 - Progress bar shows how much of the countdown has elapsed
 - Completion state is reflected in the status pill
+
+### Theme Toggle
+
+- Switch between light and dark themes from the header
+- Saves the selected preference in `localStorage`
+- Falls back to the system color scheme on first visit
 
 ## Styling
 
