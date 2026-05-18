@@ -7,6 +7,7 @@ A polished React application with two focused time tools:
 - Clear digital time displays
 - Responsive Tailwind CSS interface
 - Dark theme toggle with saved preference
+- Animated full-screen focus mode for each running clock
 - Component, hook, and utility separation for maintainable code
 
 ## Tech Stack
@@ -131,6 +132,7 @@ Small shared utilities:
 - Pause without losing the current elapsed value
 - Reset to zero
 - Centisecond display for a more precise stopwatch feel
+- Expands into full-screen focus mode when started
 
 ### Timer
 
@@ -139,6 +141,14 @@ Small shared utilities:
 - Inputs are disabled while running to avoid accidental duration changes
 - Progress bar shows how much of the countdown has elapsed
 - Completion state is reflected in the status pill
+- Expands into full-screen focus mode when started
+
+### Full-Screen Focus Mode
+
+- Starting either clock automatically expands that panel to fill the screen
+- The minimize icon returns the panel to the normal two-column layout
+- The expand icon can reopen full-screen mode without restarting the clock
+- Pressing `Escape` also exits full-screen mode
 
 ### Theme Toggle
 

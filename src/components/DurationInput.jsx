@@ -1,4 +1,9 @@
-export function DurationInput({ totalSeconds, disabled, onChange }) {
+export function DurationInput({
+  totalSeconds,
+  disabled,
+  onChange,
+  isExpanded = false,
+}) {
   const hours = Math.floor(totalSeconds / 3600);
   const minutes = Math.floor((totalSeconds % 3600) / 60);
   const seconds = totalSeconds % 60;
@@ -30,7 +35,9 @@ export function DurationInput({ totalSeconds, disabled, onChange }) {
             {label}
           </span>
           <input
-            className="h-12 rounded-lg border border-slate-200 bg-white px-3 text-center font-mono text-lg font-bold text-slate-950 shadow-sm outline-none transition focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100 disabled:bg-slate-100 disabled:text-slate-400 dark:border-slate-700 dark:bg-slate-950 dark:text-white dark:focus:border-cyan-300 dark:focus:ring-cyan-950 dark:disabled:bg-slate-800 dark:disabled:text-slate-500"
+            className={`rounded-lg border border-slate-200 bg-white px-3 text-center font-mono font-bold text-slate-950 shadow-sm outline-none transition focus:border-cyan-500 focus:ring-4 focus:ring-cyan-100 disabled:bg-slate-100 disabled:text-slate-400 dark:border-slate-700 dark:bg-slate-950 dark:text-white dark:focus:border-cyan-300 dark:focus:ring-cyan-950 dark:disabled:bg-slate-800 dark:disabled:text-slate-500 ${
+              isExpanded ? 'h-14 text-2xl sm:h-16 sm:text-3xl' : 'h-12 text-lg'
+            }`}
             disabled={disabled}
             inputMode="numeric"
             max={part === 'hours' ? '99' : '59'}
